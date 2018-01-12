@@ -37,7 +37,7 @@ bot.on("message", function(message) {
             }); 
          break;
         default:
-            .setDescription("Ugyldig kommando. Prøv !info");
+            message.channel.send("Ugyldig kommando. Prøv !info");
             break;
     }
 });
