@@ -21,6 +21,13 @@ bot.on("message", function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
+        case "info":
+            const embed = new Discord.RichEmbed()
+            .setTitle("[Herakles] for Strayboots AltShop")
+            .setDescription("Bruk !getalt kommandoen for å få en gratis NON Access bruker.")
+            .setThumbnail("http://householdairfresheners.com/wp-content/uploads/2017/02/Perfect-S-Logo-Design-75-For-Your-free-logo-designer-with-S-Logo-Design.jpg")
+            .setFooter("Join Discorden vår her: https://discord.gg/hQCbvAk");
+            break;
         case "getalt":
         var request = require('request');
         var a = [];
