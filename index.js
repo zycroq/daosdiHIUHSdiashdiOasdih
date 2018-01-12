@@ -1,9 +1,7 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
-const TOKEN = "NDAwMzU5MzM3MTkwNzUyMjU2.DTgNeQ.6Mebh6R-HyqnOy5jX6MY-KbEpsg";
 const PREFIX = "!";
-
-var bot = new Discord.Client();
 
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "welcome").send(member.toString() + " velkommen til serveren!");
