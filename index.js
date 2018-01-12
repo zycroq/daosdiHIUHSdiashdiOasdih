@@ -27,6 +27,7 @@ bot.on("message", function(message) {
             .setDescription("Bruk !getalt kommandoen for å få en gratis NON Access bruker.")
             .setThumbnail("http://householdairfresheners.com/wp-content/uploads/2017/02/Perfect-S-Logo-Design-75-For-Your-free-logo-designer-with-S-Logo-Design.jpg")
             .setFooter("Join Discorden vår her: https://discord.gg/hQCbvAk");
+            message.channel.send({embed});
             break;
         case "getalt":
         var request = require('request');
