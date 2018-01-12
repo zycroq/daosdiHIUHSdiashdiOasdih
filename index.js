@@ -33,7 +33,7 @@ bot.on("message", function(message) {
             }
             message.author.send(splitted);
             message.author.send("Hvis du mener at NA brukeren din ikke funker, send en melding til wrymex.");
-            message.channel.send(message.author + ", du har nå fått tilsendt en NA bruker på PM!");
+            message.channel.send(message.author + ", du har nå fått tilsendt en NA bruker!");
             }); 
          break;
         default:
