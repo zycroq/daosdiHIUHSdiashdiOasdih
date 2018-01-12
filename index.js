@@ -3,10 +3,6 @@ const bot = new Discord.Client();
 
 const PREFIX = "!";
 
-bot.on("guildMemberAdd", function(member) {
-    member.guild.channels.find("name", "welcome").send(member.toString() + " velkommen til serveren!");
-});
-
 bot.on("ready", function(message) {
   console.log("Ready");
 });
@@ -24,7 +20,7 @@ bot.on("message", function(message) {
         case "info":
             const embed = new Discord.RichEmbed()
             .setTitle("[Herakles] for Strayboots AltShop")
-            .setDescription("Bruk !getalt kommandoen for å få en gratis NON Access bruker.")
+            .setDescription("Bruk !getalt kommandoen for å få en gratis NON-FULL Access bruker.")
             .setThumbnail("http://householdairfresheners.com/wp-content/uploads/2017/02/Perfect-S-Logo-Design-75-For-Your-free-logo-designer-with-S-Logo-Design.jpg")
             .setFooter("Join Discorden vår her: https://discord.gg/hQCbvAk");
             message.channel.send({embed});
@@ -41,7 +37,7 @@ bot.on("message", function(message) {
             }
             message.author.send(splitted);
             message.author.send("Hvis du mener at NA brukeren din ikke funker, send en melding til **wrymex**.");
-            message.channel.send(message.author + ", du har nå fått tilsendt en NA bruker!");
+            message.channel.send(message.author + ", du har nå fått tilsendt en NFA bruker!");
             }); 
          break;
         default:
