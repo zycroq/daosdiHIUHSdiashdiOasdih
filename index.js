@@ -10,7 +10,7 @@ bot.on("message", function(message) {
     console.log(message.content);
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(TOKEN);
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
@@ -45,6 +45,12 @@ bot.on("message", function(message) {
              break;
         default:
             message.channel.send("Sorry, but i cant find your command.");
+            break;
+            case "ping":
+            const embed = new Discord.RichEmbed()
+            .setTitle("Im  gonna take you")
+            .setDescription("Pong!")
+            message.channel.send({embed});
             break;
     }
 });
