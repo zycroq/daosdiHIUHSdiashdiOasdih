@@ -45,6 +45,7 @@ bot.on("message", function(message) {
              break;
              case "ping":
              message.channel.send("Pong!");
+            break;
         default:
             message.channel.send("Sorry, but i cant find your command.");
             break;
