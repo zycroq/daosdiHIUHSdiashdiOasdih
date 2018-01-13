@@ -36,7 +36,7 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
 
-            var btn = $(this);
+            var btn = (this);
 
             btn.prop('disabled', true);
             setTimeout(function(){
