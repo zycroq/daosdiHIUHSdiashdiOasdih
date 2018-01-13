@@ -46,19 +46,6 @@ bot.on("message", function(message) {
              case "changelog":
              message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             break;
-            case "stafflist":
-            .setTitle("StrayBoots > Stafflist")
-            .setDescription("| zycroq > Founder")
-            .setDescription("| Maiu > Founder")
-            .setDescription("| Aucaso > Owner")
-            .setDescription("| Legendezz > Owner")
-            .setDescription("| Official_Gamer > Co-Owner")
-            .setDescription("| Rug > Administrator")
-            .setDescription("| iiHero > Helper")
-            .setDescription("| BlackB1RD > Blackbird Support")
-            .setFooter("If you want to apply for staff, use the ?apply command.");
-            message.channel.send({embed});
-           break;
         default:
             message.channel.send("Sorry, but i cant find your command.");
             break;
