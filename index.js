@@ -43,9 +43,8 @@ bot.on("message", function(message) {
                 message.channel.send(message.author + ", there you have a new account.");
                 }); 
              break;
-             case "news":
-             message.channel.send("| 13.01.2018 | We have now a StrayBoots bot. Made by @wrymex ❄🔗#2371 & @maiu🎉#1152 ");
-             message.channel.send("| 14.01.2018 | StrayBoots bot test! ");
+             case "changelog":
+             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             break;
         default:
             message.channel.send("Sorry, but i cant find your command.");
