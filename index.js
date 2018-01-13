@@ -46,6 +46,9 @@ bot.on("message", function(message) {
              case "changelog":
              message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             break;
+             case "whyme":
+             message.channel.send("why do you think this bot want you?");
+            break;
         default:
             message.channel.send("Sorry, but i cant find your command.");
             break;
