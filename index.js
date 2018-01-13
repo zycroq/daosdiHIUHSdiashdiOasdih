@@ -43,6 +43,8 @@ bot.on("message", function(message) {
                 message.channel.send(message.author + ", there you have a new account.");
                 }); 
              break;
+             case "ping":
+             message.channel.send("Pong!");
         default:
             message.channel.send("Sorry, but i cant find your command.");
             break;
