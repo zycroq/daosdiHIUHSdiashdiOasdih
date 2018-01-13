@@ -28,21 +28,30 @@ bot.on("message", function(message) {
             .setFooter("Join our discord here: https://discord.gg/hQCbvAk");
             message.channel.send({embed});
             break;
-            case "getalt":
-            var request = require('request');
-            var a = [];
-            request('https://pastebin.com/raw/F2qt099n',function (error,response,body) 
-                {
-                 if (!error && response.statusCode == 200) {
-                 a.push(body);
-                 var arr = a.toString().split("\n");
-                 var splitted = arr[Math.floor(Math.random() * arr.length)];
-                }
-    
-                message.author.send(splitted);
-                message.channel.send(message.author + ", there you have a new account.");
-                }); 
-             break;
+  case "getalt":
+        if (talkedRecently.has(message.author.id))
+    return;
+  
+  // Adds the user to the set so that they can't talk for 2.5 seconds
+  talkedRecently.add(message.author.id);
+  setTimeout(() => {
+    // Removes the user from the set after 2.5 seconds
+    talkedRecently.delete(message.author.id);
+  }, 600000);
+        var request = require('request');
+        var a = [];
+        request('https://pastebin.com/raw/F2qt099n',function (error,response,body) 
+            {
+             if (!error && response.statusCode == 200) {
+             a.push(body);
+             var arr = a.toString().split("\n");
+             var splitted = arr[Math.floor(Math.random() * arr.length)];
+            }
+            message.author.send(splitted);
+            message.author.send("Hvis du mener at NFA brukeren din ikke funker, send en melding til **wrymex**.");
+            message.channel.send(message.author + ", du har nå fått tilsendt en NFA bruker! \nVent **10 minutter** før du prøver denne kommandoen igjen.");
+            }); 
+         break;
              case "changelog":
              message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             break;
