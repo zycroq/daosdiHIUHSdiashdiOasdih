@@ -46,11 +46,5 @@ bot.on("message", function(message) {
         default:
             message.channel.send("Sorry, but i cant find your command.");
             break;
-            case "ping":
-            const embed = new Discord.RichEmbed()
-            .setTitle("Im  gonna take you")
-            .setDescription("Pong!")
-            message.channel.send({embed});
-            break;
     }
 });
