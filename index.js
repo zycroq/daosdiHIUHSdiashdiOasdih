@@ -46,7 +46,17 @@ bot.on("message", function(message) {
              case "changelog":
              message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             break;
-             case "whyme":
+             case "stafflist":
+             message.channel.send("| zycroq > Founder");
+            message.channel.send("| Maiu > Founder");
+            message.channel.send("| Aucaso > Owner");
+            message.channel.send("| Legendezz > Owner");
+            message.channel.send("| Official_Gamer > Co-Owner");
+            message.channel.send("| Rug > Administrator");
+            message.channel.send("| iiHero > Helper");
+            message.channel.send("| BlackB1RD > BlackBird supporter");
+            break;
+               case "staff":
              message.channel.send("| zycroq > Founder");
             message.channel.send("| Maiu > Founder");
             message.channel.send("| Aucaso > Owner");
