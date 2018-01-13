@@ -36,16 +36,15 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
 
-            var btn = (this);
+            var cooled = require('cooled')
 
-            btn.prop('disabled', true);
-            setTimeout(function(){
-            btn.prop('disabled', false);
-            },15000);
-
+            var fn = cooled(function() {
             message.author.send(splitted);
             message.author.send("Hvis du mener at NA brukeren din ikke funker, send en melding til **wrymex**.");
             message.channel.send(message.author + ", du har nå fått tilsendt en NFA bruker!");
+            }, 1000)
+
+            setInterval(fn, 20)
             }); 
          break;
         default:
