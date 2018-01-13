@@ -6,6 +6,8 @@ const TOKEN = "NDAwMzYzODk3NDM1MTkzMzQ0.DTtTIA.ws-p5bMi6cZLrknParstNtbyXPM";
 
 var bot = new Discord.Client();
 
+const talkedRecently = new Set();
+
 bot.on("message", function(message) {
     console.log(message.content);
 });
@@ -28,7 +30,7 @@ bot.on("message", function(message) {
             .setFooter("Join our discord here: https://discord.gg/hQCbvAk");
             message.channel.send({embed});
             break;
-  case "getalt":
+        case "getalt":
         if (talkedRecently.has(message.author.id))
     return;
   
