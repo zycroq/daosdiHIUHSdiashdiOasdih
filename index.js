@@ -1,13 +1,16 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const Discord = require("discord.js");
 
-const PREFIX = "!";
+const PREFIX = ">";
 
-bot.on("ready", function(message) {
-  console.log("Ready");
+const TOKEN = "NDAwMzYzODk3NDM1MTkzMzQ0.DTtTIA.ws-p5bMi6cZLrknParstNtbyXPM";
+
+var bot = new Discord.Client();
+
+bot.on("message", function(message) {
+    console.log(message.content);
 });
 
-
+bot.login(process.env.BOT_TOKEN);
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
@@ -19,32 +22,29 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
         case "info":
             const embed = new Discord.RichEmbed()
-            .setTitle("[Herakles] for Strayboots AltShop")
-            .setDescription("Bruk !getalt kommandoen for å få en gratis NON-FULL Access bruker.")
+            .setTitle("StrayBoots Official Discord Bot")
+            .setDescription("If you want a new alt account/second account write >getalt")
             .setThumbnail("http://householdairfresheners.com/wp-content/uploads/2017/02/Perfect-S-Logo-Design-75-For-Your-free-logo-designer-with-S-Logo-Design.jpg")
-            .setFooter("Join Discorden vår her: https://discord.gg/hQCbvAk");
+            .setFooter("Join our discord here: https://discord.gg/hQCbvAk");
             message.channel.send({embed});
             break;
-        case "getalt":
-        var request = require('request');
-        var a = [];
-        request('https://pastebin.com/raw/F2qt099n',function (error,response,body) 
-            {
-             if (!error && response.statusCode == 200) {
-             a.push(body);
-             var arr = a.toString().split("\n");
-             var splitted = arr[Math.floor(Math.random() * arr.length)];
-            }
-
-            message.author.send(splitted);
-            message.author.send("Hvis du mener at NA brukeren din ikke funker, send en melding til **wrymex**.");
-            message.channel.send(message.author + ", du har nå fått tilsendt en NFA bruker!");
-            }); 
-         break;
+            case "getalt":
+            var request = require('request');
+            var a = [];
+            request('https://pastebin.com/raw/F2qt099n',function (error,response,body) 
+                {
+                 if (!error && response.statusCode == 200) {
+                 a.push(body);
+                 var arr = a.toString().split("\n");
+                 var splitted = arr[Math.floor(Math.random() * arr.length)];
+                }
+    
+                message.author.send(splitted);
+                message.channel.send(message.author + ", there you have a new account.");
+                }); 
+             break;
         default:
-            message.channel.send("Ugyldig kommando. Prøv !info");
+            message.channel.send("Sorry, but i cant find your command.");
             break;
     }
 });
-
-bot.login(process.env.BOT_TOKEN);
