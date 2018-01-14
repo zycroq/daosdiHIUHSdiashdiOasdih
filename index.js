@@ -58,6 +58,10 @@ bot.on("message", function(message) {
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
             break;
+            client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+      break;
         default:
             message.channel.send("Unknown command, please use the ?help command.");
             break;
