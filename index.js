@@ -51,13 +51,16 @@ bot.on("message", function(message) {
             }
             message.author.send(splitted);
             message.author.send("If you believe your account is not working, send a message to Wrymex.");
-            message.channel.send(message.author + ", you have now received an NFA user! \Wait ** 10 minutes ** before trying this command again.");
+            message.channel.send(message.author + ", you have now received an NFA user! \ nWait ** 10 minutes ** before trying this command again.");
             }); 
          break;
              case "changelog":
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
             break;
+             case "staff":
+             message.channel.send("Founder | TEST");
+             break;
         default:
             message.channel.send("Unknown command, please use the ?help command.");
             break;
