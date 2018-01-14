@@ -50,15 +50,16 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
             message.author.send(splitted);
-            message.author.send("Hvis du mener at NFA brukeren din ikke funker, send en melding til **wrymex**.");
-            message.channel.send(message.author + ", du har nå fått tilsendt en NFA bruker! \nVent **10 minutter** før du prøver denne kommandoen igjen.");
+            message.author.send("If you believe your account is not working, send a message to Wrymex.");
+            message.channel.send(message.author + ", you have now received an NFA user! \ nWait ** 10 minutes ** before trying this command again.");
             }); 
          break;
              case "changelog":
-             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
+            message.channel.send("| 13.01.2018 | StrayBoots bot founded");
+            message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
             break;
         default:
-            message.channel.send("Sorry, but i cant find your command.");
+            message.channel.send("Unknown command, please use the ?help command.");
             break;
     }
 });
