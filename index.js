@@ -62,7 +62,7 @@ bot.on("message", function(message) {
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
             break;
-            case "invite":
+             case "invite":
             message.channel.send("** StrayBoots ** | Invite the StrayBoots bot to your server!");
             message.channel.send("** Invite ** | https://discordapp.com/oauth2/authorize?client_id=400363897435193344&scope=bot&permissions=1");
             break;
