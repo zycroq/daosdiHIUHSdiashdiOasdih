@@ -4,6 +4,10 @@ const PREFIX = "?";
 
 const TOKEN = "NDAwMzYzODk3NDM1MTkzMzQ0.DTtTIA.ws-p5bMi6cZLrknParstNtbyXPM";
 
+const weather = require('weather-js'); // Make sure you call the packages you install.
+
+const fs = require('fs'); // But we also need to require the fs package.
+
 var bot = new Discord.Client();
 
 const talkedRecently = new Set();
@@ -57,6 +61,10 @@ bot.on("message", function(message) {
              case "changelog":
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
+            break;
+            case "invite":
+            message.channel.send("** StrayBoots ** | Invite the StrayBoots bot to your server!");
+            message.channel.send("** Invite ** | https://discordapp.com/oauth2/authorize?client_id=400363897435193344&scope=bot&permissions=1");
             break;
         default:
             message.channel.send("Unknown command, please use the ?help command.");
