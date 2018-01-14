@@ -52,7 +52,24 @@ bot.on("message", function(message) {
             message.author.send(splitted);
             message.author.send("If you believe your account is not working, send a message to Wrymex.");
             message.channel.send(message.author + ", you have now received an NFA user! \ Wait ** 10 minutes ** before trying this command again.");
-            }); 
+            });
+                          case "removecooldown":
+              if (message.author.id == "249838434682667009" || message.author.id == "391300271239593984") {
+
+              if(args.length == 0) {
+                  message.channel.send(message.author + ", please provide a user id!");
+              } else {
+                  talkedRecently.delete(args[1]);
+                  message.channel.send(message.author + ", that user was now removed from the cooldown!");
+              }
+
+              } else {
+                  message.channel.send(message.author + ", you do not have permissions to perform this command!");
+              }
+               break;
+        default:
+            message.channel.send("Unknown command, please use the ?help command.");
+            break;
          break;
              case "changelog":
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
