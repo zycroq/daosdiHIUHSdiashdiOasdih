@@ -100,6 +100,20 @@ bot.on("message", function(message) {
                   message.channel.send(message.author + ", you do not have permissions to perform this command!");
               }
                break;
+               case "removecd":
+               if (message.author.id == "249838434682667009" || message.author.id == "391300271239593984") {
+ 
+               if(args.length == 0) {
+                   message.channel.send(message.author + ", please provide a user id!");
+               } else {
+                   talkedRecently.delete(args[1]);
+                   message.channel.send(message.author + ", that user was now removed from the cooldown!");
+               }
+ 
+               } else {
+                   message.channel.send(message.author + ", you do not have permissions to perform this command!");
+               }
+                break;
         default:
             message.channel.send("Unknown command, please use the ?help command.");
             break;
