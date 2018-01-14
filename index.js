@@ -58,6 +58,14 @@ bot.on("message", function(message) {
             message.channel.send("| 13.01.2018 | StrayBoots bot founded");
             message.channel.send("| 14.01.2018 | The getalt command got 10 minutes cooldown.");
             break;
+         case "help":
+            const embed = new Discord.RichEmbed()
+            .setTitle("StrayBoots Official Discord Bot")
+            .setDescription("If you want a new alt account/second account write >getalt")
+            .setThumbnail("http://householdairfresheners.com/wp-content/uploads/2017/02/Perfect-S-Logo-Design-75-For-Your-free-logo-designer-with-S-Logo-Design.jpg")
+            .setFooter("Join our discord here: https://discord.gg/hQCbvAk");
+            message.channel.send({embed});
+            break;
         default:
             message.channel.send("Unknown command, please use the ?help command.");
             break;
