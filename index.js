@@ -53,7 +53,7 @@ bot.on("message", function(message) {
             message.author.send("If you believe your account is not working, send a message to Wrymex.");
             message.channel.send(message.author + ", you have now received an NFA user! \ Wait ** 10 minutes ** before trying this command again.");
             });
-                          case "removecooldown":
+          case "removecooldown":
               if (message.author.id == "249838434682667009" || message.author.id == "391300271239593984") {
 
               if(args.length == 0) {
