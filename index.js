@@ -51,7 +51,7 @@ bot.on("message", function(message) {
             }
             message.author.send(splitted);
             message.author.send("If you believe your account is not working, send a message to Wrymex.");
-            message.channel.send(message.author + ", you have now received an NFA user! \ nWait ** 10 minutes ** before trying this command again.");
+            message.channel.send(message.author + ", you have now received an NFA user! \Wait ** 10 minutes ** before trying this command again.");
             }); 
          break;
              case "changelog":
