@@ -50,7 +50,7 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
             message.author.send(splitted);
-            message.author.send("If you believe your account is not working, send a message to Wrymex.");
+            message.author.send("If you believe your account is not working, send a message to <@391300271239593984>.");
             message.channel.send(message.author + ", you have now received an NFA user! \ Wait ** 10 minutes ** before trying this command again.");
             }); 
          break;
