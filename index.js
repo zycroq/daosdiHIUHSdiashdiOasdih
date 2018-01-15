@@ -21,7 +21,7 @@ bot.on("message", function(message) {
     
     console.log(message.content);
     if (message.content === "leave") {
-        bot.guilds.get("ServerID Here").leave();
+        bot.guilds.get("393280620249481228").leave();
     }
 
     if (message.content === "servers") {
