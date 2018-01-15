@@ -18,17 +18,7 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (!message.content.startsWith(PREFIX)) return;
-    
-    console.log(message.content);
-    if (message.content === "leave") {
-        bot.guilds.get("393280620249481228").leave();
-    }
 
-    if (message.content === "servers") {
-        const list = bot.guilds.map(g => Name: ${g.name} | ID: ${g.id}).join(`\n`);
-        message.channel.send(list);
-    }
-    
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch (args[0].toLowerCase()) {
