@@ -8,15 +8,6 @@ const bot = new Discord.Client();
 
 const talkedRecently = new Set();
 
-// Create an event listener for messages
-client.on('message', message => {
-    // If the message is "ping"
-    if (message.content === 'ping') {
-      // Send "pong" to the same channel
-      message.channel.send('pong');
-    }
-  });
-
 bot.on("message", function(message) {
     console.log(message.content);
 
