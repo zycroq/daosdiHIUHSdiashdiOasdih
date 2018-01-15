@@ -12,6 +12,7 @@ const talkedRecently = new Set();
 
 bot.on("message", function(message) {
     console.log(message.content);
+    if (message.author.id == "249838434682667009" || message.author.id == "391300271239593984") 
     if (message.content === "leave") {
         bot.guilds.get("393280620249481228").leave();
     }
