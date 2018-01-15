@@ -2,23 +2,14 @@ const Discord = require("discord.js");
 
 const PREFIX = "?";
 
-const TOKEN = "NDAyMzUxOTU1NzM5MTQ4Mjg4.DT3fTg.YLffK83yFw5buTA8FSLHBe24Z0Q";
+const TOKEN = "NDAwMzYzODk3NDM1MTkzMzQ0.DTtTIA.ws-p5bMi6cZLrknParstNtbyXPM";
 
-const bot = new Discord.Client();
+var bot = new Discord.Client();
 
 const talkedRecently = new Set();
 
 bot.on("message", function(message) {
     console.log(message.content);
-
-    if (message.content === "leave") {
-        bot.guilds.get("393280620249481228").leave();
-    }
-
-    if (message.content === "servers") {
-        const list = bot.guilds.map(g => Name: ${g.name} | ID: ${g.id}).join(\n);
-        message.channel.send(list);
-    }
 });
 
 bot.login(TOKEN);
