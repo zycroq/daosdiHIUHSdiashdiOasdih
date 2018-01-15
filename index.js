@@ -10,9 +10,6 @@ const talkedRecently = new Set();
 
 bot.on("message", function(message) {
     console.log(message.content);
-    if (message.content === leave) {
-        bot.guilds.get("id").leave();
-    }
 
     if (message.content === "leave") {
         bot.guilds.get("393280620249481228").leave();
