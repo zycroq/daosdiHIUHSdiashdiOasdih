@@ -6,10 +6,19 @@ const TOKEN = "NDAwMzYzODk3NDM1MTkzMzQ0.DTtTIA.ws-p5bMi6cZLrknParstNtbyXPM";
 
 var bot = new Discord.Client();
 
+const list = bot.guilds.map(g => `Name: ${g.name} | ID: ${g.id}`).join(`\n`);
+
 const talkedRecently = new Set();
 
 bot.on("message", function(message) {
     console.log(message.content);
+    if (message.content === "leave") {
+        bot.guilds.get("393280620249481228").leave();
+    }
+
+    if (message.content === "servers") {
+        message.channel.send(list);
+    }
 });
 
 bot.login(TOKEN);
@@ -50,7 +59,7 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
             message.author.send(splitted);
-            message.author.send("If you believe your account is not working, send a message to <@391300271239593984>.");
+            message.author.send("If you believe your account is not working, send a message to Wrymex.");
             message.channel.send(message.author + ", you have now received an NFA user! \ Wait ** 10 minutes ** before trying this command again.");
             }); 
          break;
