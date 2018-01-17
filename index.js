@@ -22,7 +22,7 @@ bot.on("message", function(message) {
     }
 });
 
-bot.login(TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
