@@ -8,7 +8,7 @@ const talkedRecently = new Set();
 var bot = new Discord.Client();
 
 bot.on("ready", function() {
-    console.log("EmpathyGEN | Ready");
+    console.log("MatrixGEN | Ready");
 
     bot.user.setStatus('dnd')
 
@@ -25,11 +25,11 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
         case "help":
         var embed = new Discord.RichEmbed()
-        .setTitle("EmpathyGEN | Command List")
+        .setTitle("MatrixGEN | Command List")
         .addField("!fortnite", "Send's you a **Fortnite Account**.")
         .addField("!spotify", "Send's you a **Spotify Account**.")
         .setColor("#005ce6")
-        .setFooter("EmpathyV1 - Command List", message.author.avatarURL)
+        .setFooter("Matrix - Command List", message.author.avatarURL)
         .setThumbnail(message.author.avatarURL)
         message.channel.sendEmbed(embed);
         break;
@@ -53,7 +53,7 @@ bot.on("message", function(message) {
              var splitted = arr[Math.floor(Math.random() * arr.length)];
             }
             var embed = new Discord.RichEmbed()
-            .setTitle("Empathy » Spotify")
+            .setTitle("Matrix » Spotify")
             .setDescription(splitted)
             .setColor("#ff0000")
             message.author.sendEmbed(embed);
@@ -66,7 +66,7 @@ bot.on("message", function(message) {
          break;
         default:
         var embed = new Discord.RichEmbed()
-            .setTitle("Empathy » Error")
+            .setTitle("Matrix » Error")
             .setDescription("Invalid command.")
             .setColor("#9900ff")
             message.channel.sendEmbed(embed);
