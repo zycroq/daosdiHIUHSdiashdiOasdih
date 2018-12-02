@@ -10,7 +10,7 @@ var bot = new Discord.Client();
 bot.on("ready", function() {
     console.log("MatrixGEN | Ready");
 
-    bot.user.setStatus('dnd')
+    bot.user.setStatus('Generating accounts!')
 
     bot.user.setGame('Generating accounts!', 'https://twitch.tv/xderyz')
 });
