@@ -12,7 +12,7 @@ bot.on("ready", function() {
 
     bot.user.setStatus('dnd')
 
-    bot.user.setGame('generating accounts')
+    bot.user.setGame('Generating accounts!', 'https://twitch.tv/xderyz')
 });
 
 bot.on("message", function(message) {
