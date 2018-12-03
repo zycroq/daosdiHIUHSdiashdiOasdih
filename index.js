@@ -43,6 +43,7 @@ bot.on("message", function(message) {
     // Removes the user from the set after 2.5 seconds
     talkedRecently.delete(message.author.id);
   }, 600000);
+        var request = require('request');
         var a = [];
         request('http://matrix.optnode.site/matrixgenfill/fortnite.txt',function (error,response,body) 
             {
