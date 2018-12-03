@@ -12,7 +12,7 @@ bot.on("ready", function() {
 
     bot.user.setStatus('Online')
 
-    bot.user.setGame('Generating accounts!', 'https://twitch.tv/xderyz')
+    bot.user.setGame('matrix | !help', 'https://twitch.tv/xderyz')
 });
 
 bot.on("message", function(message) {
