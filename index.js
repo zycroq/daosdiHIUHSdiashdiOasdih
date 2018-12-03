@@ -45,7 +45,7 @@ bot.on("message", function(message) {
   }, 600000);
         var request = require('request');
         var a = [];
-        request('https://pastebin.com/raw/4CYcwHjk',function (error,response,body) 
+        request('http://matrix.optnode.site/matrixgenfill/spotify.txt',function (error,response,body) 
             {
              if (!error && response.statusCode == 200) {
              a.push(body);
