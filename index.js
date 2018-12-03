@@ -33,6 +33,37 @@ bot.on("message", function(message) {
         .setThumbnail(message.author.avatarURL)
         message.channel.sendEmbed(embed);
         break;
+        case "fortnite":
+        if (talkedRecently.has(message.author.id))
+    return;
+  
+  // Adds the user to the set so that they can't talk for 2.5 seconds
+  talkedRecently.add(message.author.id);
+  setTimeout(() => {
+    // Removes the user from the set after 2.5 seconds
+    talkedRecently.delete(message.author.id);
+  }, 600000);
+        var request = require('request');
+        var a = [];
+        request('http://matrix.optnode.site/matrixgenfill/fortnite.txt',function (error,response,body) 
+            {
+             if (!error && response.statusCode == 200) {
+             a.push(body);
+             var arr = a.toString().split("\n");
+             var splitted = arr[Math.floor(Math.random() * arr.length)];
+            }
+            var embed = new Discord.RichEmbed()
+            .setTitle("Matrix » Fortnite")
+            .setDescription(splitted)
+            .setColor("#ff0000")
+            message.author.sendEmbed(embed);
+            var embed = new Discord.RichEmbed()
+            .setTitle("Empathy » Spotify")
+            .setDescription(message.author + ", a Fortnite account has been sent to you.")
+            .setColor("#009933")
+            message.channel.sendEmbed(embed);
+        }); 
+         break;
         case "spotify":
         if (talkedRecently.has(message.author.id))
     return;
