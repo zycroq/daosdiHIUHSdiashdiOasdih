@@ -95,7 +95,7 @@ bot.on("message", function(message) {
             message.channel.sendEmbed(embed);
         }); 
          break;
-         case "drop-fortnite":
+         case "drop":
         if (talkedRecently.has(message.author.id))
     return;
   
